@@ -1,9 +1,15 @@
-/* 
-body {
+
+   body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 20px;
-    background-color: #2c443b;
+    background-image: url("./cigarrillo.jpg");
+    background-repeat: repeat;
+    cursor: url('./defaults.png'), auto;
+}
+
+a {
+    cursor: url('./manos.png'), auto;
 }
 
 img {
@@ -15,9 +21,16 @@ img {
 #contenedor {
     margin-left: 25%;
     margin-right: 25%;
-    background-color: #ffffff6c;
+    background-color: #d6d4d4c2;
     border-radius: 5px;
     padding: 20px;
+    transition: 1000ms;
+}
+
+#contenedor:hover {
+    margin-left: 24%;
+    margin-right: 24%;
+    transition: 1000ms;
 }
 
 div {
@@ -40,22 +53,23 @@ input[type="text"] {
     padding: 10px;
     border-radius: 5px;
     border: 1px solid #cccccc;
-    width: 200px;
+    width: 100%;
     font-size: 16px;
+    cursor: url('./manos.png'), auto;
 }
 
 button {
     padding: 10px 20px;
-    background-color: #4caf50;
+    background-color: #af844c;
     color: #ffffff;
     border: none;
     border-radius: 5px;
     font-size: 16px;
-    cursor: pointer;
+    cursor: url('./manos.png'), auto;
 }
 
 button:hover {
-    background-color: #45a049;
+    background-color: #a07845;
 }
 
 #contenido1,
@@ -65,87 +79,17 @@ button:hover {
     background-color: #f0f0f0;
     border: 1px solid #cccccc;
     border-radius: 5px;
-} */
-body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 20px;
-    background-image: url("./cigarrillo.jpg");
-    background-repeat: repeat;
-    cursor: url('./defaults.png'), auto;
-  }
-  a{
-    cursor: url('./manos.png'), auto;
-  }
-  img {
-    max-width: 100%;
-    height: auto;
-    border-radius: 5px;
-  }
-  
-  #contenedor {
-    margin-left: 25%;
-    margin-right: 25%;
-    background-color: #d6d4d4c2;
-    border-radius: 5px;
-    padding: 20px;
-    transition: 1000ms;
-  }
-  #contenedor:hover{
-    margin-left: 23%;
-    margin-right: 23%;
-    box-shadow: 5px 5px 0px #55442fb2;
-    transition: 1000ms;
+}
 
-  }
-  
-  div {
-    border-radius: 5px;
-    padding: 20px;
-    margin-bottom: 20px;
-  }
-  
-  h2 {
-    color: #333333;
-    font-size: 18px;
-    margin-top: 0;
-  }
-  
-  form {
-    margin-bottom: 10px;
-  }
-  
-  input[type="text"] {
-    padding: 10px;
-    border-radius: 5px;
-    border: 1px solid #cccccc;
-    width: 200px;
-    font-size: 16px;
-    cursor: url('./manos.png'), auto;
-
-  }
-  
-  button {
-    padding: 10px 20px;
-    background-color: #af844c;
-    color: #ffffff;
-    border: none;
-    border-radius: 5px;
-    font-size: 16px;
-    cursor: url('./manos.png'), auto;
-
-  }
-  
-  button:hover {
-    background-color: #a07845;
-  }
-  
-  #contenido1,
-  #contenido2 {
-    margin-top: 10px;
-    padding: 10px;
-    background-color: #f0f0f0;
-    border: 1px solid #cccccc;
-    border-radius: 5px;
-  }
-  
+/* Media Query para dispositivos móviles */
+@media only screen and (max-width: 768px) {
+    #contenedor {
+        margin-left: 10%;
+        margin-right: 10%;
+    }
+    #contenedor:hover {
+        margin-left: 10%;
+        margin-right: 10%;
+        transition: 1000ms;
+    }
+}
