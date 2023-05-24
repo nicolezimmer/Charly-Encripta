@@ -5,6 +5,7 @@
     padding: 20px;
     background-image: url("./cigarrillo.jpg");
     background-repeat: repeat;
+    background-size: 200px;
     cursor: url('./defaults.png'), auto;
 }
 
@@ -91,5 +92,9 @@ button:hover {
         margin-left: 10%;
         margin-right: 10%;
         transition: 1000ms;
+    }
+    body {
+        background-size: 100px;
+
     }
 }
