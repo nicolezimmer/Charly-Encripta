@@ -73,8 +73,8 @@ button:hover {
     background-color: #a07845;
 }
 
-#contenido1,
-#contenido2 {
+#contenidoEncriptado,
+#contenidoDesencriptado {
     margin-top: 10px;
     padding: 10px;
     background-color: #f0f0f0;
