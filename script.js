@@ -49,8 +49,15 @@ function desencriptarNumero(numero) {
 }
 
 function esNumeroCuatroDigitos(numero) {
-  if (typeof numero === 'number' && Number.isInteger(numero) && numero >= 0 && numero <= 9999) {
-    return numero.toString().length <= 4;
+  if (typeof numero === 'number' && Number.isInteger(numero) && numero >= 1000 && numero <= 9999) {
+    return true;
+  } else {
+    return false;
+  }
+}
+function esNumeroCuatroDigitosOMenos(variable) {
+  if (typeof variable === 'number' && Number.isInteger(variable) && variable >= 0 && variable <= 9999) {
+    return variable.toString().length <= 4;
   } else {
     return false;
   }
@@ -100,10 +107,10 @@ numeroInputDesencriptar.addEventListener('input', function() {
   const numero = parseInt(numeroInputDesencriptar.value);
   const resultado = document.createElement('h3');
 
-  if (esNumeroCuatroDigitos(numero)) {
+  if (esNumeroCuatroDigitosOMenos(numero)) {
     resultado.textContent = desencriptarNumero(numero);
   } else {
-    resultado.textContent = 'Ingrese un número entero de cuatro dígitos';
+    resultado.textContent = 'Ingrese un número entero de cuatro dígitos o menos';
   }
 
   contenidoDesencriptado.innerHTML = '';
